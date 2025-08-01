@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Centro de Odontopediatría y Cirugía Maxilofacial</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/phosphor-icons"></script>
+  <style>
+    :root {
+      --bg: #fff;
+      --text: #1c1c1e;
+      --accent: #00bfa6;
+      --card-bg: #f9f9f9;
+      --border: #e0e0e0;
+      --radius: 1rem;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--text); line-height: 1.4; }
+    header { padding: 2rem; text-align: center; }
+    h1 { font-size: 2rem; color: var(--accent); }
+    .logo { width: 120px; margin-bottom: 0.5rem; }
+    nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 1rem; }
+    nav a { color: var(--text); text-decoration: none; font-weight: 600; transition: color 0.3s; }
+    nav a:hover { color: var(--accent); }
+
+    .hero { text-align: center; padding: 3rem 1rem; }
+    .hero h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    .hero p { color: #555; }
+
+    .services, .testimonios { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; padding: 2rem; }
+    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.75rem; text-align: center; transition: transform 0.25s; position: relative; overflow: hidden; }
+    .card:hover { transform: translateY(-4px); }
+    .card i, .card .icon-svg { font-size: 2.5rem; color: var(--accent); margin-bottom: 0.75rem; display: inline-block; width: 48px; height: 48px; }
+
+    .sobre { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2rem; padding: 3rem 1rem; background: var(--card-bg); border-top: 1px solid var(--border); border-radius: var(--radius); margin: 1rem; }
+    .sobre img { border-radius: var(--radius); width: 280px; height: auto; object-fit: cover; }
+    .sobre-texto { max-width: 600px; }
+
+    .contact, .form-section { text-align: center; padding: 2.5rem 1rem; background: var(--card-bg); margin: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border); }
+    .contact a, .btn { display: inline-block; margin-top: 1rem; padding: 0.75rem 2rem; background: var(--accent); color: #fff; border-radius: 999px; text-decoration: none; font-weight: 600; transition: background 0.2s; cursor: pointer; border: none; }
+    .contact a:hover, .btn:hover { background: #009e89; }
+    .contact-info { margin-top: 1rem; line-height: 1.6; }
+    .contact-info p { margin: 6px 0; }
+    .contact-info i { margin-right: 0.5rem; color: var(--accent); }
+
+    .form-grid { display: grid; gap: 1rem; max-width: 700px; margin: auto; }
+    .input-group { display: flex; flex-direction: column; text-align: left; }
+    label { font-size: 0.9rem; margin-bottom: 4px; font-weight: 600; }
+    input, select, textarea {
+      padding: 12px 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+      resize: vertical;
+    }
+    textarea { min-height: 100px; }
+    .small { font-size: 0.75rem; color: #666; margin-top: 4px; }
+
+    footer { text-align: center; padding: 2rem; font-size: 0.85rem; color: #888; }
+
+    @media (max-width: 900px){
+      .sobre { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="TU_LOGO.png" alt="Centro de Odontopediatría" class="logo">
+    <h1>Centro de Odontopediatría y Cirugía Maxilofacial</h1>
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#doctora">Doctora</a>
+      <a href="#testimonios">Pacientes</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Dra. Ma. Gabriela Alcántara Bauza - Odontopediatra</h2>
+    <p>Especialista en la atención dental de niños, adolescentes y pacientes con necesidades especiales.</p>
+  </section>
+
+  <section id="servicios" class="services">
+    <div class="card">
+      <i class="ph ph-heartbeat"></i>
+      <h3>Odontología Infantil</h3>
+      <p>Cuidados, tratamientos preventivos y restaurativos para niños.</p>
+    </div>
+    <div class="card">
+      <i class="ph ph-sparkle"></i>
+      <h3>Control de Caries</h3>
+      <p>Tratamientos personalizados para detener y prevenir caries en infantes.</p>
+    </div>
+    <div class="card">
+      <i class="ph ph-smiley"></i>
+      <h3>Educación Bucal</h3>
+      <p>Enseñanza de hábitos saludables para toda la familia.</p>
+    </div>
+    <div class="card">
+      <!-- SVG de diente minimalista -->
+      <div class="icon-svg" aria-label="Diente" role="img">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2C10.343 2 9 3.343 9 5v4c0 1.657 1.343 3 3 3s3-1.343 3-3V5c0-1.657-1.343-3-3-3z"/>
+          <path d="M9 12c0 2.21 1.79 4 4 4s4-1.79 4-4v6c0 .552-.447 1-1 1h-6c-.553 0-1-.448-1-1v-6z"/>
+        </svg>
+      </div>
+      <h3>Cirugía Maxilofacial Infantil</h3>
+      <p>Procedimientos quirúrgicos especializados en niños.</p>
+    </div>
+  </section>
+
+  <section id="doctora" class="sobre">
+    <img src="FOTO_DOCTORA.jpg" alt="Dra. Gabriela Alcántara" />
+    <div class="sobre-texto">
+      <h2>Sobre la Doctora</h2>
+      <p>La Dra. Ma. Gabriela Alcántara Bauza es especialista en Odontopediatría con amplia experiencia en el trato con niños y adolescentes, combinando profesionalismo, empatía y tecnología de vanguardia.</p>
+    </div>
+  </section>
+
+  <section id="testimonios" class="testimonios">
+    <div class="card">
+      <img src="PACIENTE_1.jpg" alt="Paciente feliz" style="width:100%; border-radius:8px; object-fit:cover; height:180px;">
+      <div style="padding: 1rem;">
+        <p><strong>Laura M.</strong><br>"Gracias a la doctora, mis hijos ya no tienen miedo al dentista."</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="PACIENTE_2.jpg" alt="Paciente feliz" style="width:100%; border-radius:8px; object-fit:cover; height:180px;">
+      <div style="padding: 1rem;">
+        <p><strong>Diego R.</strong><br>"Excelente atención, muy recomendable para niños pequeños."</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="PACIENTE_3.jpg" alt="Paciente feliz" style="width:100%; border-radius:8px; object-fit:cover; height:180px;">
+      <div style="padding: 1rem;">
+        <p><strong>Ana G.</strong><br>"Trato amable y profesional, la mejor experiencia."</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="form-section">
+    <h2>Reserva tu cita</h2>
+    <p>Llena los datos y se abrirá tu cliente de correo con el mensaje listo para enviar.</p>
+    <form id="citaForm" class="form-grid" onsubmit="armarMail(event)">
+      <div class="input-group">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" required placeholder="Ej. Juan Pérez">
+      </div>
+      <div class="input-group">
+        <label for="email">Correo del paciente</label>
+        <input type="email" id="email" required placeholder="ejemplo@mail.com">
+      </div>
+      <div class="input-group">
+        <label for="fecha">Fecha deseada</label>
+        <input type="date" id="fecha" required>
+      </div>
+      <div class="input-group">
+        <label for="servicio">Servicio</label>
+        <select id="servicio" required>
+          <option value="">Selecciona...</option>
+          <option>Odontología Infantil</option>
+          <option>Control de Caries</option>
+          <option>Educación Bucal</option>
+          <option>Cirugía Maxilofacial Infantil</option>
+        </select>
+      </div>
+      <div class="input-group" style="grid-column: 1 / -1;">
+        <label for="mensaje">Mensaje adicional (opcional)</label>
+        <textarea id="mensaje" placeholder="Ej. Mi hijo tiene miedo al dentista, preferimos en la tarde."></textarea>
+      </div>
+      <div style="text-align:center;">
+        <button type="submit" class="btn">Enviar solicitud por correo</button>
+        <div class="small">Se abrirá tu cliente de correo con todo prellenado. Revisa antes de enviar.</div>
+      </div>
+    </form>
+    <div class="contact" style="margin-top:2rem;">
+      <h3>Contacto directo</h3>
+      <div class="contact-info">
+        <p><i class="ph ph-phone"></i> 5555241921</p>
+        <p><i class="ph ph-phone"></i> 5549568360</p>
+        <p><i class="ph ph-phone-call"></i> 5534923006</p>
+        <p><i class="ph ph-envelope"></i> gabyalcantarabauza@gmail.com</p>
+      </div>
+      <a href="mailto:gabyalcantarabauza@gmail.com" class="btn"><i class="ph ph-envelope"></i> Enviar correo</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Centro de Odontopediatría y Cirugía Maxilofacial | Dra. Gabriela Alcántara Bauza
+  </footer>
+
+  <script>
+    function escapar(text) {
+      return encodeURIComponent(text).replace(/%20/g, '+');
+    }
+
+    function armarMail(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value.trim();
+      const pacienteEmail = document.getElementById('email').value.trim();
+      const fecha = document.getElementById('fecha').value;
+      const servicio = document.getElementById('servicio').value;
+      const mensajeAd = document.getElementById('mensaje').value.trim();
+      if (!nombre || !pacienteEmail || !fecha || !servicio) return;
+
+      const to = 'gabyalcantarabauza@gmail.com';
+      const subject = `Solicitud de cita: ${servicio} - ${nombre}`;
+      let body = `Nombre: ${nombre}%0D%0A` +
+                 `Correo del paciente: ${pacienteEmail}%0D%0A` +
+                 `Servicio: ${servicio}%0D%0A` +
+                 `Fecha solicitada: ${fecha}%0D%0A`;
+      if (mensajeAd) {
+        body += `Mensaje adicional: ${mensajeAd}%0D%0A`;
+      }
+      body += `%0D%0AGracias por su atención.`;
+
+      const mailto = `mailto:${to}?subject=${escapar(subject)}&body=${body}`;
+      window.location.href = mailto;
+    }
+  </script>
+
+</body>
+</html>
